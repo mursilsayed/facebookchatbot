@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title My Site
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js' integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous")
+    script(src='js/user-identity.js')
+    
+			  
+  body
+  
+    h1 HBL Mobile Facebook Chatbot
+    p Please enter your HBL Mobile User Id to continue with the Account Linking Process
+    //script.
+      if (usingPug)
+        console.log('you are awesome')
+      else
+        console.log('use pug')
+   
+    form(method='POST' action='auth')
+      label(for='HBLID') UserName: 
+      input(type='text' name='HBLID' id='HBLID')
+      input(type='hidden' id ='fbparams' name='fbparams' value=JSON.stringify(fbparams))
+      button(type='submit' id='submitBtn') 'Validate'
+  div#errorMessage( style="color:red") 
+    
+  
